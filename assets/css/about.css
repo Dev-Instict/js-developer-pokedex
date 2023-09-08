@@ -1,0 +1,11 @@
+.pokemons li:hover{
+    cursor:default;
+    filter:none;
+}
+
+a{
+    text-decoration: none;
+    pointer-events: none;
+    color: white;
+   
+}
