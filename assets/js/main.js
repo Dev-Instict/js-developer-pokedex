@@ -1,16 +1,16 @@
 const pokemonList = document.getElementById('pokemonList')
 const loadMore = document.getElementById('loadMore')
-const selectionPoke = document.getElementById('pokemonList')
-const limit = 10;
+
+const limit = 12;
 let offset = 0;
 const maxRecords = 158;
 
 function loadPokemonsItems(offset, limit){
     pokeApi.getPokemons(offset, limit).then((pokemons = []) => {
         const newHtml = pokemons.map((pokemon) => `
-        <li class="pokemon ${pokemon.type}">
+        <li class="pokemon ${pokemon.type}" id="${pokemon.number}">
             <span class="number">#${pokemon.number}</span>
-            <span class="name">${pokemon.name}</span>
+            <h3 class="name">${pokemon.name}</h3>
     
             <div class="detail">
                 <ol class="types">
@@ -24,8 +24,21 @@ function loadPokemonsItems(offset, limit){
         pokemonList.innerHTML += newHtml
     })
 }
-
 loadPokemonsItems(offset, limit)
+
+document.addEventListener("DOMContentLoaded", () => {
+
+    pokemonList.addEventListener("click", (event) => {
+        const pokemonItem = event.target.closest(".pokemon");
+        if (pokemonItem) {
+            const pokemonId = pokemonItem.getAttribute("id");
+            const url = `about.html?id=${pokemonId}`;
+            window.open(url, "_self");
+        }
+    });
+});
+
+
 
 
 loadMore.addEventListener('click', () => {
@@ -43,8 +56,3 @@ loadMore.addEventListener('click', () => {
     }
 
 })
-
-selectionPoke.addEventListener('click', () => {
-    location.replace("about.html")
-    
-});

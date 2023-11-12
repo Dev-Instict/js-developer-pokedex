@@ -1,11 +1,109 @@
-.pokemons li:hover{
-    cursor:default;
-    filter:none;
+.container{
+    max-width: 800px;
+    padding: 10px 25px;
 }
 
-a{
-    text-decoration: none;
-    pointer-events: none;
+.container-header, .container-conteudo, .container-stats{
+    max-width: 800px;
+}
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.pokemon .header .name{
+    font-size: 1.5rem;
+    align-items: center;
+}
+
+.conteudo{
+    display: flex;
+    justify-content: space-between;
+    max-width: 800px;
+    padding-bottom: 20px;
+}
+
+.caracterist{
+    display: flex;
+}
+
+.info{
+    align-self: center;
+
+}
+
+.detail .types{
+    display: flex;
+}
+
+.pokemon .number{
+    font-size: 20px;
+    align-self: center;
+}
+
+.pokemon .detail .types .type {
+    border: 1px solid white;
+    font-size: .85rem;
+}
+
+.pokemon .weight, .pokemon{
+    text-transform: capitalize;
     color: white;
-   
+    margin-bottom: .25rem;
+}
+
+.container-stats{
+    display: flex;
+    gap: 50px;
+    align-items: center;
+    padding-bottom: 15px;
+    justify-content:center;
+}
+
+.container-moves{
+    display: flex;
+    gap: 50px;
+    align-items: center;
+}
+
+.stats, .moves{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    flex: 1;
+}
+
+
+.stat-group{
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+}
+
+.moves-group{
+    display: flex;
+    justify-content:space-between;
+    padding: 5px 0px;
+ 
+}
+
+.move{
+    list-style-type:circle;
+}
+
+.namestat, .counter-stat{
+    display: block;
+    padding: 3px;
+}
+
+img{
+    max-width: 180px;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.811);
+    border: 1px dashed black;
+    border-radius: 50px;
+    
 }

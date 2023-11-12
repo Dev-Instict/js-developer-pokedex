@@ -1,3 +1,20 @@
+@font-face {
+    font-family: 'Pokemon Hollow.ttf';
+    src: url('../font/Pokemon\ Hollow.ttf') format('truetype');
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;300;400;700;900&display=swap');
+
+*{
+    font-family: 'Raleway';
+}
+
+h1{
+    color: black;
+    font-family: 'Pokemon Hollow';
+}
+
+
 .pokemons{
     display: grid;
     list-style: none;
@@ -16,7 +33,7 @@
     flex-direction: column;
     padding: 1rem;
     margin: .5rem;
-    border-radius: 1rem;
+    border-radius: 0.5rem;
 }
 
 .normal{
@@ -76,19 +93,18 @@
 
 .content h1{
     text-align: center;
+    font-weight: 700;
 }
 
 .pokemon .number{
     color: #00000037;
-    text-align: right;
-    text-align: right;
     font-size: .625rem;
 }
 
 .pokemon .name{
     text-transform: capitalize;
     color: white;
-    margin-bottom: .25rem;
+
 }
 
 .pokemon .detail{
@@ -134,9 +150,9 @@
     cursor: pointer;
     background-color: #678fee;
     border: .010rem solid rgba(0, 0, 0, 0.705);
-    border-radius: 1rem;
+    border-radius: 5px;
     color: white;
-    padding: .50rem .90rem;
+    padding: .60rem 1.5rem;
     margin: .25rem 0;
     font-size: .825rem;
 }
